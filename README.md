@@ -1,5 +1,5 @@
 # ecommerce-react-redux
-criação de uma ecommerce com react, redux, styled-componentes axios, immer entre outros.
+criação de uma ecommerce com react, redux, styled-componentes axios, WebAPI, immer entre outros.
 
 rodar projeto local execute os comandos a seguir.
 yarn install   

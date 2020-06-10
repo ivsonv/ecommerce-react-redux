@@ -1,6 +1,13 @@
-export function addCarrinho(prod) {
+export function addCarrinhoRequest(id) {
   return {
-    type: "ADD_CARRINHO",
+    type: "ADD_CARRINHO_REQUEST",
+    id
+  }
+}
+
+export function addCarrinhoSucesso(prod) {
+  return {
+    type: "ADD_CARRINHO_SUCESSO",
     prod
   }
 }
