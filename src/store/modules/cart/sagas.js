@@ -1,5 +1,6 @@
 import { call, select, put, all, takeLatest } from 'redux-saga/effects';
 import api from '../../../services/api';
+import history from '../../../services/history';
 import { formatPrice } from '../../../utils/format';
 import { toast } from 'react-toastify';
 
@@ -23,7 +24,10 @@ function* addCarrinho({ id }) {
       qtd: 1,
       priceFormatted: formatPrice(response.data.price)
     }
+
     yield put(addCarrinhoSucesso(data));
+
+    history.push('/cart');
   }
 }
 
