@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdShoppingBasket } from 'react-icons/md';
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 
 import { Container, Cart } from './styles';
 import Logo from '../../assets/img/logo.png';
 
-function Header({ cardSize }) {
+export default function Header() {
+  const cardSize = useSelector(state => state.cart.length);
+
   return (
     <Container>
       <Link to="/">
@@ -22,7 +24,3 @@ function Header({ cardSize }) {
     </Container>
   );
 }
-
-export default connect(state => ({
-  cardSize: state.cart.length
-}))(Header);

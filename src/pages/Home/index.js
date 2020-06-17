@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { bindActionCreators } from "redux";
 import { MdAddShoppingCart } from 'react-icons/md';
 import { formatPrice } from '../../utils/format';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import * as CartActions from '../../store/modules/cart/actions';
 
 import api from '../../services/api';
 import { ProductList } from './styles';
 
-function Home({ addCarrinhoRequest }) {
+export default function Home() {
   const [products, setProducts] = useState([]);
+  const _dispatch = useDispatch();
 
   useEffect(() => {
     async function loadProducts() {
@@ -26,7 +26,7 @@ function Home({ addCarrinhoRequest }) {
   }, [])
 
   function addProduto(id) {
-    addCarrinhoRequest(id);
+    _dispatch(CartActions.addCarrinhoRequest(id));
   }
 
   return (
@@ -48,8 +48,3 @@ function Home({ addCarrinhoRequest }) {
     </ProductList>
   )
 }
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(CartActions, dispatch);
-
-export default connect(null, mapDispatchToProps)(Home);
