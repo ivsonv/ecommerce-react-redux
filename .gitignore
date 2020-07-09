@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/ecommerce/v16/.suo
+.vs/ecommerce-react-redux/v16/.suo

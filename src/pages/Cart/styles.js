@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-export const Container = styled.div`
+export const Container = styled.div `
   padding: 30px;
   background: #fff;
   border-radius: 18px;
@@ -28,7 +27,7 @@ export const Container = styled.div`
   }
 `;
 
-export const ProductTable = styled.table`
+export const ProductTable = styled.table `
   width: 100%;
 
   thead th {
@@ -79,7 +78,7 @@ export const ProductTable = styled.table`
   }
 `;
 
-export const Total = styled.div`
+export const Total = styled.div `
   display: flex;
   align-items: baseline;
 
